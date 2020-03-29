@@ -5,6 +5,7 @@ Encoding and decoding a text by Caesar cipher.
 
 ```
 git clone {repository URL}
+cd node-js -> go to folder node-js
 git checkout task1 -> go to branch task1
 npm install
 cd task1 -> go to folder task1
