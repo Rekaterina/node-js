@@ -1,60 +1,41 @@
-# RS School REST service
+## Caesar cipher Command line interface (CLI) tool
+Encoding and decoding a text by Caesar cipher.
 
-## Prerequisites
-
-- Git - [Download & Install Git](https://git-scm.com/downloads).
-- Node.js - [Download & Install Node.js](https://nodejs.org/en/download/) and the npm package manager.
-
-## Downloading
+### Installing
 
 ```
 git clone {repository URL}
-```
-
-## Installing NPM modules
-
-```
+git checkout task1 -> go to branch task1
 npm install
+cd task1 -> go to folder task1
+```
+### Options
+
+1.  **-s, - -shift**: a shift size
+2.  **-i, - -input**: an input file
+3.  **-o, - -output**: an output file
+4.  **-a, - -action**: an action encode/decode
+
+Action (encode/decode) and the shift are required.
+
+### Usage examples
+
+**Running on command line**
+
+Encoding a string entered on the command line with a `shift` of 7:
+
+```bash
+$ node index -a encode -s 7
 ```
 
-## Running application
+Encoding a `input.txt` file with a `shift` of 7 and saving the result to a `output.txt` file:
 
-```
-npm start
-```
-
-After starting the app on port (4000 as default) you can open
-in your browser OpenAPI documentation by typing http://localhost:4000/doc/.
-For more information about OpenAPI/Swagger please visit https://swagger.io/.
-
-## Testing
-
-After application running open new terminal and enter:
-
-To test without authorization
-
-```
-npm test
+```bash
+$ node index -a encode -s 7 -i input.txt -o output.txt
 ```
 
-To test with authorization
+ input.txt
+ `This is secret. Message about "_" symbol!`
 
-```
-npm run test:auth
-```
-
-## Development
-
-If you're using VSCode, you can get a better developer experience from integration with [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) and [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) extensions.
-
-### Auto-fix and format
-
-```
-npm run lint
-```
-
-### Debugging in VSCode
-
-Press <kbd>F5</kbd> to debug.
-
-For more information, visit: https://code.visualstudio.com/docs/editor/debugging
+ output.txt
+ `Aopz pz zljyla. Tlzzhnl hivba "_" zftivs!`
